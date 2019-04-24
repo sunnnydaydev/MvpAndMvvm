@@ -2,23 +2,27 @@ package com.example.administrator.mvpdemo.presenter;
 
 import android.text.TextUtils;
 
+
 import com.example.administrator.mvpdemo.model.User;
-import com.example.administrator.mvpdemo.view.BaseView;
+
+import com.example.administrator.mvpdemo.view.MainView;
 
 /**
  * Create by SunnyDay on 2019/04/24
  */
-public class MainPresenterImpl implements BasePresenter {
-    private BaseView baseView;
+public class MainPresenterImpl implements MainPresenter {
+    private MainView mainView;
 
     @Override
-    public void attachView(BaseView baseView) {
-        this.baseView = baseView;
+    public void attachView(MainView mainView) {
+        this.mainView = mainView;
     }
+
+
 
     @Override
     public void detachView() {
-        baseView = null;
+        mainView = null;
     }
 
     /**
@@ -28,13 +32,13 @@ public class MainPresenterImpl implements BasePresenter {
     public void login(User user) {
         if (!TextUtils.isEmpty(user.getNumber()) && !TextUtils.isEmpty(user.getPwd())) {
             if (user.getNumber().equals("123") && user.getPwd().equals("123")) {
-                baseView.loginSuccess("登录成功！");
+                mainView.loginSuccess("登录成功！");
             } else {
-                baseView.loginFailed("账号或者密码错误，登录失败！");
+                mainView.loginFailed("账号或者密码错误，登录失败！");
             }
 
         } else {
-            baseView.loginFailed("账号或者密码错误，登录失败！");
+            mainView.loginFailed("账号或者密码错误，登录失败！");
         }
     }
 }

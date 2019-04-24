@@ -10,7 +10,7 @@ import com.example.administrator.mvpdemo.R;
 import com.example.administrator.mvpdemo.model.User;
 import com.example.administrator.mvpdemo.presenter.MainPresenterImpl;
 
-public class MainActivity extends AppCompatActivity implements BaseView {
+public class MainActivity extends AppCompatActivity implements MainView {
     MainPresenterImpl mainPresenter;
     private EditText number;
     private EditText pwd;

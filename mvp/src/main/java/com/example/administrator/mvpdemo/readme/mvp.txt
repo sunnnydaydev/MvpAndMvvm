@@ -1,0 +1,15 @@
+1、mvp 模式
+            m  ：model
+            v  ：view
+            p  ：presenter
+2、mvp核心思想
+    吧Activity中的UI逻辑抽象成view接口，
+    吧业务逻辑抽象成presenter接口，
+    model类还是原来的model类
+
+3、作用：
+ - 分离视图逻辑和业务逻辑降低耦合
+ - Activity只处理生命周期相关任务，代码简洁。
+ - 视图逻辑和业务逻辑抽象到view和Presenter中提高阅读性。
+ - presenter被抽象成接口可以有多种具体实现。
+ - 业务逻辑在Presenter中避免后台线程引用activity导致内存泄漏。

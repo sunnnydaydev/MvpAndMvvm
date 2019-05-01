@@ -15,10 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <!--字段的绑定、点击事件的绑定-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{User.uName}" />
+            android:text="@{User.uName}"
+            android:onClick="@{User.onClickName}"/>
     </LinearLayout>
 
 
